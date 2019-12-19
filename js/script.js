@@ -1,3 +1,17 @@
+window.onload = function(){
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  document.getElementById("heure").innerHTML = time;
+}
+
+setInterval(function() {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  document.getElementById("heure").innerHTML = time;
+}, 1 * 1000); // 60 * 1000 milsec
+
 function ShowValue(caller, y) {
 
     var CarList = document.getElementById("CarList");
@@ -33,10 +47,16 @@ function GetPrice(x) {
 function CloseForm(){
   document.getElementById("ExitBox").style.display = "none";
   document.getElementById("ContactForm").style.opacity = 0;
+  document.getElementById("ManifacturerBox").style.opacity = 0;
 }
 
 
 function OpenForm(){
   document.getElementById("ExitBox").style.display = "inherit";
   document.getElementById("ContactForm").style.opacity = 1;
+}
+
+function OpenMan(){
+  document.getElementById("ExitBox").style.display = "inherit";
+  document.getElementById("ManifacturerBox").style.opacity = 1;
 }

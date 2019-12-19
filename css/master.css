@@ -3,34 +3,36 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
 
 /* Page setup */
-
-body, html{
+body, html {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   height: 100vh;
 }
 
 /* Change global tag properties */
-
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
+h1 {
+  font-family: "Open Sans";
+}
+
 /*H3 Is the tag under the vehicle */
-h3{
+h3 {
   margin: 0 5px 0 5px;
   padding: 0;
   font-weight: normal;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*H4 takes the form of a subtitle/quote */
-h4{
-  font-family: "Satisfy",cursive;
+h4 {
+  font-family: "Satisfy", cursive;
   font-weight: lighter;
   font-size: 20px;
   margin: 0;
@@ -38,68 +40,67 @@ h4{
 }
 
 /* h4 is slider header -----------------------------------------*/
-h5{
+h5 {
   margin: 0;
   padding: 0;
 }
 
-h5 var{
+h5 var {
   float: right;
 }
 
 /* h6 is footer subtitles */
-
-h6{
-  all:initial;
+h6 {
+  all: initial;
   text-shadow: 0 0 1px grey;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   color: grey;
   font-weight: 300;
 }
 
 /* Global Classes -----------------------------------------*/
-.flex1{
+.flex1 {
   flex: 1;
   width: 100%;
 }
 
-.vAlign{
+.vAlign {
   margin: auto 0 auto 0;
 }
 
-.wAlign{
+.wAlign {
   margin: 0 auto 0 auto;
   text-align: center;
 }
 
-.boxed{
+.boxed {
   border: 3px solid black;
   padding: 3px;
 }
 
-.bMargin{
+.bMargin {
   margin: 0 0 5px 0;
 }
 
-.h100{
+.h100 {
   height: 100%;
 }
 
-.w100{
+.w100 {
   width: 100%;
 }
 
-.inblock{
+.inblock {
   display: inline-block;
 }
 
-.gMargin{
+.gMargin {
   margin: 10%;
 }
 
 /*Slider settings and appearance */
-.slider{
+.slider {
   -webkit-appearance: none;
   background: #9f9f9f;
   transition: opacity .2s;
@@ -109,79 +110,49 @@ h6{
 
 .slider::-webkit-slider-thumb {
   opacity: 1;
-  -webkit-appearance: none; /* Override default look */
-  width: 15px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: white; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  -webkit-appearance: none;
+  /* Override default look */
+  width: 15px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: white;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
   border: 1px solid grey;
 }
 
-.slider:hover{
+.slider:hover {
   background: #8f8f8f;
   border: 2px solid black;
 }
 
 /* table setup*/
-
 .tg {
-    border-collapse: collapse;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
+  border-collapse: collapse;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
 }
 
-.tg .tc{
-    color: white;
-    background: black;
-    font-weight:100;
-    text-align: center;
-}
-
-    .tg .tc2 {
-        color: black;
-        font-size: 16px;
-        font-weight: 100;
-        border: 1px solid black;
-        text-align: center;
-    }
-
-/* ID ----------------------------------------- */
-
-#Container{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-/* Map */
-#Map{
-    width:100%;
-    border:0;
-    margin-top: 20px;
-}
-
-/*Contact form*/
-
-#ExitBox{
-  display: none;
+.tg .tc {
+  color: white;
   background: black;
-  opacity: .3;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  font-weight: 100;
+  text-align: center;
 }
 
-#OpenForm{
-  cursor: pointer;
+.tg .tc2 {
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+  border: 1px solid black;
+  text-align: center;
 }
 
-#ContactForm{
-  opacity: 0;
+/* popup */
+.popup {
   background: white;
   border: 2px solid black;
   box-shadow: 0 0 100px black;
@@ -191,17 +162,11 @@ h6{
   top: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
-  display: flex;
-  flex-direction: column;
   z-index: 100;
   transition-duration: .5s;
 }
-#ContactForm h1{
-  font-family: "Open Sans";
-  margin: 20px auto 20px auto;
-}
 
-#ContactForm p{
+.popup p {
   cursor: pointer;
   font-size: 20px;
   right: 30px;
@@ -209,46 +174,108 @@ h6{
   font-weight: bold;
 }
 
-#ContactForm input,textarea,button{
+.popup h1 {
+  margin: 20px auto 20px auto;
+}
+
+.popup a{
+  color: grey;
+  text-decoration: underline;
+}
+
+.popup a:hover{
+  color: black;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* ID ----------------------------------------- */
+#Container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Map */
+#Map {
+  width: 100%;
+  border: 0;
+  margin-top: 20px;
+}
+
+/*Contact form*/
+#ExitBox {
+  display: none;
+  background: black;
+  opacity: .3;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 20px auto 20px auto;
+  height: 100%;
+  cursor: pointer;
+}
+
+#ContactForm {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#ContactForm input, textarea, button {
   resize: none;
   border: 2px solid grey;
   padding: 5px;
   margin: 5px 15% 5px 15%;
 }
 
-#ContactForm button:hover{
+#ContactForm button:hover {
   background: grey;
   border: 2px solid black;
 }
 
+#ManifacturerBox {
+  opacity: 0;
+}
+
+#ManifacturerBox ul{
+  list-style: none;
+  display: block;
+  margin: 0 50px 0 50px;
+}
 
 /* Header */
-
-header{
+header {
   display: flex;
   flex-direction: row;
   height: 100px;
   box-shadow: 0 0 15px black;
-  z-index: 99; /* stays on top */
+  z-index: 99;
+  /* stays on top */
   background: white;
   overflow: hidden;
 }
 
-header span{
-  display: flex;.
+header span {
+  display: flex;
+  .
 }
 
-header span img{
+header span img {
   display: block;
-  max-width:200px;
+  max-width: 200px;
   max-height: 80px;
   width: auto;
   height: auto;
   margin: 10px;
 }
 
-header span h1{
-  font-family: "Open Sans",sans-serif;
+header span h1 {
+  font-family: "Open Sans", sans-serif;
   margin: auto 0 auto 10px;
   border: 5px solid black;
   padding: 4px;
@@ -256,45 +283,41 @@ header span h1{
 }
 
 /* main */
-main{
+main {
   display: flex;
   flex-flow: row;
   flex: 1;
 }
 
 /* aside */
-
-main aside{
-  padding:2px;
+main aside {
+  padding: 2px;
   z-index: 1;
-  flex:0;
+  flex: 0;
   width: 200px;
   float: left;
   box-shadow: 0 0 10px black;
   background: white;
 }
 
-main aside span{
+main aside span {
   display: flex;
   flex-direction: column;
 }
 
 /* modify p in aside */
-
-aside p{
-  font-family: "Open Sans",sans-serif;
+aside p {
+  font-family: "Open Sans", sans-serif;
   line-height: 15px;
 }
 
 /* main content */
-
-main article{
+main article {
   display: flex;
   flex-flow: column;
-
 }
 
-article span{
+article span {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -304,28 +327,28 @@ article span{
 }
 
 /* Car cases */
-    article span div {
-        width: 215px;
-        border: 3px solid black;
-        background: #bebebe;
-        margin: 10px;
-        float: left;
-    }
+article span div {
+  width: 215px;
+  border: 3px solid black;
+  background: #bebebe;
+  margin: 10px;
+  float: left;
+}
 
 /* Car image */
 article span img {
-    box-shadow: 0 5px 10px black;
-    width: 100%;
-    object-fit:cover;
-    height: 170px;
-    }
+  box-shadow: 0 5px 10px black;
+  width: 100%;
+  object-fit: cover;
+  height: 170px;
+}
 
-article footer{
+article footer {
   background: blue;
 }
 
 /* Car price */
-main article span var{
+main article span var {
   float: right;
   display: inline-block;
   color black;
@@ -334,8 +357,7 @@ main article span var{
 }
 
 /* Footer stuff */
-
-footer{
+footer {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -343,11 +365,9 @@ footer{
   border: 2px solid #737373;
 }
 
-
-
-    /* responsive */
+/* responsive */
 @media all and (max-width: 643px) {
-    article span{
-        justify-content: center;
-    }
+  article span {
+    justify-content: center;
+  }
 }

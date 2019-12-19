@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -23,84 +24,163 @@
     <!------------------------------------------------------------------->
     <!--Main is the part as column in the middle of the screen -->
     <main>
-        <aside>
-            <h4 class="wAlign boxed bMargin">Search parameters</h4>
-            <span>
-                <h5 class="boxed bMargin">Prix Max<var id="Price">15000</var></h5>
-                <input type="range" min="200" max="15000" value="15000" step="100" oninput="ShowValue(this,1)" class="slider bMargin">
-            </span>
-            <table class="tg w100">
-                <tr>
-                    <th class="tc">Lun</th>
-                    <th class="tc2">9h-17h</th>
-                </tr>
-                <tr>
-                    <td class="tc">Mar</td>
-                    <td class="tc2">9h-17h</td>
-                </tr>
-                <tr>
-                    <td class="tc">Mer</td>
-                    <td class="tc2">9h-17h</td>
-                </tr>
-                <tr>
-                    <td class="tc">Jeu</td>
-                    <td class="tc2">9h-20h</td>
-                </tr>
-                <tr>
-                    <td class="tc">Ven</td>
-                    <td class="tc2">9h-20h</td>
-                </tr>
-                <tr>
-                    <td class="tc">Sam</td>
-                    <td class="tc2">10h-17h</td>
-                </tr>
-            </table>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4682.020623897736!2d-73.4541381250034!3d45.752226123240796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8e5e0b63cf087%3A0x80c6cf3c863190b7!2s565%20Rue%20Lanaudi%C3%A8re%2C%20Repentigny%2C%20QC%20J6A%207N1!5e0!3m2!1sfr!2sca!4v1576675775667!5m2!1sfr!2sca" id="Map"></iframe>
-            <p class="boxed">Adresse :<br>2300 chemin Comptois, Terrebonne, Qc, J6X 4H4</p>
-            <p class="boxed">Téléphone :<br>(450) 654-8760</p>
-            <h2 onclick="OpenForm()" id="OpenForm" class="wAlign boxed bMargin">CONTACT</h2></a>
-            <a href="https://saaq.gouv.qc.ca/securite-routiere/moyens-deplacement/auto/entretien-securite/entretien-regulier/"><h2 class="wAlign boxed bMargin">ENTRETIEN</h2></a>
-        </aside>
+      <aside>
+        <h4 class="wAlign boxed bMargin">Search parameters</h4>
+        <span>
+          <h5 class="boxed bMargin">Prix Max<var id="Price">15000</var></h5>
+          <input type="range" min="200" max="15000" value="15000" step="100" oninput="ShowValue(this,1)" class="slider bMargin">
+        </span>
+        <table class="tg w100">
+          <tr>
+            <th class="tc">Lun</th>
+            <th class="tc2">9h-17h</th>
+          </tr>
+          <tr>
+            <td class="tc">Mar</td>
+            <td class="tc2">9h-17h</td>
+          </tr>
+          <tr>
+            <td class="tc">Mer</td>
+            <td class="tc2">9h-17h</td>
+          </tr>
+          <tr>
+            <td class="tc">Jeu</td>
+            <td class="tc2">9h-20h</td>
+          </tr>
+          <tr>
+            <td class="tc">Ven</td>
+            <td class="tc2">9h-20h</td>
+          </tr>
+          <tr>
+            <td class="tc">Sam</td>
+            <td class="tc2">10h-17h</td>
+          </tr>
+        </table>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4682.020623897736!2d-73.4541381250034!3d45.752226123240796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8e5e0b63cf087%3A0x80c6cf3c863190b7!2s565%20Rue%20Lanaudi%C3%A8re%2C%20Repentigny%2C%20QC%20J6A%207N1!5e0!3m2!1sfr!2sca!4v1576675775667!5m2!1sfr!2sca"
+          id="Map"></iframe>
+        <p class="boxed">Adresse :<br>2300 chemin Comptois, Terrebonne, Qc, J6X 4H4</p>
+        <p class="boxed">Téléphone :<br>(450) 654-8760</p>
+        <h2 onclick="OpenForm()" class="wAlign cursor boxed bMargin">CONTACT</h2></a>
+        <a href="https://saaq.gouv.qc.ca/securite-routiere/moyens-deplacement/auto/entretien-securite/entretien-regulier/">
+          <h2 class="wAlign boxed bMargin">ENTRETIEN</h2>
+        </a>
+        <h2 onclick="OpenMan()" class="wAlign cursor boxed bMargin">FABRICANTS</h2></a>
+      </aside>
 
-        <article>
-          <div  onclick="CloseForm()" id="ExitBox"></div>
-          <form id="ContactForm" action="" method="post">
-            <p onclick="CloseForm()">&times;</p>
-            <h1>Contact</h1>
-              <input type="text" name="CName" placeholder="Nom" value="">
-              <input type="text" name="CSname" placeholder="Prénom" value="">
-              <input type="email" name="CMail" placeholder="exemple@gmail.com" value="">
-              <textarea name="message" draggable="false" placeholder="Message" rows="10"></textarea>
-              <button type="submit" onclick="CloseForm()" name="Submit">Envoyer</button>
-          </form>
-          <span id="CarList">
-            <div><img src="car/acura.jpg" alt="acura"><h3>Acura 2013<var>4200$</var></h3></div>
-            <div><img src="car/mercedes.jpg" alt="acura"><h3>mercos<var>6500$</var></h3></div>
-            <div><img src="car/corolla.jpg" alt="acura"><h3>corolla roule<var>1300$</var></h3></div>
-            <div><img src="car/focus.jpg" alt="acura"><h3>huanday 2004<var>2400$</var></h3></div>
-            <div><img src="car/s-l300.jpg" alt="acura"><h3>char<var>2200$</var></h3></div>
-            <div><img src="car/bmw.jpg" alt="serie3"><h3>Béhème<var>1600$</var></h3></div>
-            <div><img src="car/chevrolet.jpg" alt="subaru"><h3>Chevrolet<var>1400$</var></h3></div>
-            <div><img src="car/passat.jpg" alt="passat"><h3>Passat W8<var>4300$</var></h3></div>
-            <div><img src="car/mazda3.jpg" alt="Mazda3"><h3>Mazda3<var>1800$</var></h3></div>
-            <div><img src="car/toyotacamry.jpg" alt="Camry"><h3>2005 camry<var>4500$</var></h3></div>
-            <div><img src="car/hundaiElantra.jpg" alt="Elantra"><h3>Hyundai Elantra<var>5900$</var></h3></div>
-            <div><img src="car/hondalx.jpg" alt="honda lx"><h3>Honda Civic lx<var>12999$</var></h3></div>
-            <div><img src="car/ChevyMalibu.jpg" alt="ChevyM"><h3>Chevy Malibu<var>2700$</var></h3></div>
-            <div><img src="car/fordfocus.jpg" alt="FordFocus"><h3>Ford Focus 2011<var>3100$</var></h3></div>
-            <div><img src="car/fordTorus.jpg" alt="FordForus"><h3>Ford Taurus SEL<var>3200$</var></h3></div>
-            <div><img src="car/VWJetta.jpg" alt="Volks Jetta"><h3>Volks Jetta td1<var>9400$</var></h3></div>
-            <div><img src="car/Mitshubishi.jpg" alt="Mitshubishi"><h3>Mitshubishi<var>3000$</var></h3></div>
-            <div><img src="car/Mazda3hatch.jpg" alt="Mazda3hatch"><h3>Mazda3<var>2450$</var></h3></div>
-            <div><img src="car/corolla2013.jpg" alt="Corolla2013"><h3>Corolla 2013<var>10995$</var></h3></div>
-          </span>
+      <article>
+        <div onclick="CloseForm()" id="ExitBox"></div>
 
-        </article>
+        <form id="ContactForm" class="popup" method="post">
+          <p onclick="CloseForm()">&times;</p>
+          <h1>Contact</h1>
+          <input type="text" name="CName" placeholder="Nom" value="">
+          <input type="text" name="CSname" placeholder="Prénom" value="">
+          <input type="email" name="CMail" placeholder="exemple@gmail.com" value="">
+          <textarea name="message" draggable="false" placeholder="Message" rows="10"></textarea>
+          <button type="submit" onclick="CloseForm()" name="Submit">Envoyer</button>
+        </form>
+
+        <div class="popup" id="ManifacturerBox">
+          <p onclick="CloseForm()">&times;</p>
+          <h1 class="wAlign">Sites Fabricants</h1>
+          <ul>
+            <li>
+              <h4>Toyota : <a href="https://www.toyota.ca/toyota/en/">https://www.toyota.ca/</a></h4>
+            </li>
+            <li>
+              <h4>Honda : <a href="https://www.honda.ca/">https://www.honda.ca/</a> </h4>
+            </li>
+            <li>
+              <h4>Ford : <a href="https://www.ford.ca/">https://www.ford.ca/</a> </h4>
+            </li>
+            <li>
+              <h4>Mercedes : <a href="https://www.mercedes-benz.ca/">https://www.mercedes-benz.ca/</a> </h4>
+            </li>
+            <li>
+              <h4>BMW : <a href="https://www.bmw.ca/">https://www.bmw.ca/</a> </h4>
+            </li>
+            <li>
+              <h4>VolksWagen : <a href="https://www.vw.ca/">https://www.vw.ca/</a> </h4>
+            </li>
+            <li>
+              <h4>Acura : <a href="https://www.acura.ca/">https://www.acura.ca/</a> </h4>
+            </li>
+          </ul>
+        </div>
+
+
+        <span id="CarList">
+          <div><img src="car/acura.jpg" alt="acura">
+            <h3>Acura 2013<var>4200$</var></h3>
+          </div>
+          <div><img src="car/mercedes.jpg" alt="acura">
+            <h3>mercos<var>6500$</var></h3>
+          </div>
+          <div><img src="car/corolla.jpg" alt="acura">
+            <h3>corolla roule<var>1300$</var></h3>
+          </div>
+          <div><img src="car/focus.jpg" alt="acura">
+            <h3>huanday 2004<var>2400$</var></h3>
+          </div>
+          <div><img src="car/s-l300.jpg" alt="acura">
+            <h3>char<var>2200$</var></h3>
+          </div>
+          <div><img src="car/bmw.jpg" alt="serie3">
+            <h3>Béhème<var>1600$</var></h3>
+          </div>
+          <div><img src="car/chevrolet.jpg" alt="subaru">
+            <h3>Chevrolet<var>1400$</var></h3>
+          </div>
+          <div><img src="car/passat.jpg" alt="passat">
+            <h3>Passat W8<var>4300$</var></h3>
+          </div>
+          <div><img src="car/mazda3.jpg" alt="Mazda3">
+            <h3>Mazda3<var>1800$</var></h3>
+          </div>
+          <div><img src="car/toyotacamry.jpg" alt="Camry">
+            <h3>2005 camry<var>4500$</var></h3>
+          </div>
+          <div><img src="car/hundaiElantra.jpg" alt="Elantra">
+            <h3>Hyundai Elantra<var>5900$</var></h3>
+          </div>
+          <div><img src="car/hondalx.jpg" alt="honda lx">
+            <h3>Honda Civic lx<var>12999$</var></h3>
+          </div>
+          <div><img src="car/ChevyMalibu.jpg" alt="ChevyM">
+            <h3>Chevy Malibu<var>2700$</var></h3>
+          </div>
+          <div><img src="car/fordfocus.jpg" alt="FordFocus">
+            <h3>Ford Focus 2011<var>3100$</var></h3>
+          </div>
+          <div><img src="car/fordTorus.jpg" alt="FordForus">
+            <h3>Ford Taurus SEL<var>3200$</var></h3>
+          </div>
+          <div><img src="car/VWJetta.jpg" alt="Volks Jetta">
+            <h3>Volks Jetta td1<var>9400$</var></h3>
+          </div>
+          <div><img src="car/Mitshubishi.jpg" alt="Mitshubishi">
+            <h3>Mitshubishi<var>3000$</var></h3>
+          </div>
+          <div><img src="car/Mazda3hatch.jpg" alt="Mazda3hatch">
+            <h3>Mazda3<var>2450$</var></h3>
+          </div>
+          <div><img src="car/corolla2013.jpg" alt="Corolla2013">
+            <h3>Corolla 2013<var>10995$</var></h3>
+          </div>
+        </span>
+
+      </article>
     </main>
     <footer>
-      <div class="vAlign"><h6>Made with &#x269B;Atom </h6></div>
+      <div class="vAlign">
+        <h6>Made with &#x269B;Atom </h6>
+      </div>
       <div class="vAlign"><a href="https://github.com/Sacha-Ringenbach/bagnoles.co"><img src="img/github.png" alt="github logo" width="70%" class=" gMargin"></a></div>
-      <div class="vAlign"><h6>2019 Projet de classe</h6></div>
+      <div style="text-align:center;">
+        <span id="heure">Heure</span>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/617067/t/5"></script>
+      </div>
     </footer>
 
 
