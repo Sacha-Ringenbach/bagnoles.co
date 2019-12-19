@@ -15,6 +15,11 @@ body{
 
 /* Change global tag properties */
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 /*H3 Is the tag under the vehicle */
 h3{
   margin: 0 5px 0 5px;
@@ -191,7 +196,6 @@ h6{
   z-index: 100;
   transition-duration: .5s;
 }
- class="vAlign"
 #ContactForm h1{
   font-family: "Open Sans";
   margin: 20px auto 20px auto;
