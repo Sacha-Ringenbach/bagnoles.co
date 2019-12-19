@@ -7,6 +7,7 @@
   <title>Bagnoles Inc.</title>
   <link rel="stylesheet" href="css/master.css">
   <script src="js/script.js"></script>
+  <link rel="icon" href="img/occasAuto.png">
 </head>
 
 <body>
@@ -14,22 +15,25 @@
     <!--header -->
     <header>
       <!--header logo and company name-->
-      <span>
-        <h1>BAGNOLES INC.</h1>
+      <div>
+        <h1 class="boxed">BAGNOLES INC.</h1>
         <img src="img/occasAuto.png" alt="main logo">
-      </span>
+      </div>
       <!--header slogan-->
       <h4 class="vAlign">Une bagnole pour vous, une satisfaction pour nous !</h4>
     </header>
-    <!------------------------------------------------------------------->
     <!--Main is the part as column in the middle of the screen -->
     <main>
       <aside>
         <h4 class="wAlign boxed bMargin">Search parameters</h4>
-        <span>
+        <div>
           <h5 class="boxed bMargin">Prix Max<var id="Price">15000</var></h5>
           <input type="range" min="200" max="15000" value="15000" step="100" oninput="ShowValue(this,1)" class="slider bMargin">
-        </span>
+        </div>
+        <h2 onclick="OpenServ()" class="wAlign cursor boxed bMargin">SERVICES</h2>
+          <h2 onclick="OpenMan()" class="wAlign cursor boxed bMargin">FABRICANTS</h2>
+        <h2 onclick="OpenForm()" class="wAlign cursor boxed bMargin">CONTACT</h2>
+        <p class="boxed bMargin">Téléphone :<br>(450) 654-8760</p>
         <table class="tg w100">
           <tr>
             <th class="tc">Lun</th>
@@ -59,13 +63,8 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4682.020623897736!2d-73.4541381250034!3d45.752226123240796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc8e5e0b63cf087%3A0x80c6cf3c863190b7!2s565%20Rue%20Lanaudi%C3%A8re%2C%20Repentigny%2C%20QC%20J6A%207N1!5e0!3m2!1sfr!2sca!4v1576675775667!5m2!1sfr!2sca"
           id="Map"></iframe>
-        <p class="boxed">Adresse :<br>2300 chemin Comptois, Terrebonne, Qc, J6X 4H4</p>
-        <p class="boxed">Téléphone :<br>(450) 654-8760</p>
-        <h2 onclick="OpenForm()" class="wAlign cursor boxed bMargin">CONTACT</h2></a>
-        <a href="https://saaq.gouv.qc.ca/securite-routiere/moyens-deplacement/auto/entretien-securite/entretien-regulier/">
-          <h2 class="wAlign boxed bMargin">ENTRETIEN</h2>
-        </a>
-        <h2 onclick="OpenMan()" class="wAlign cursor boxed bMargin">FABRICANTS</h2></a>
+        <p class="boxed">Adresse :<br>2300 chemin Comptois,<br> Terrebonne, Qc, J6X 4H4</p>
+
       </aside>
 
       <article>
@@ -85,32 +84,32 @@
           <p onclick="CloseForm()">&times;</p>
           <h1 class="wAlign">Sites Fabricants</h1>
           <ul>
-            <li>
-              <h4>Toyota : <a href="https://www.toyota.ca/toyota/en/">https://www.toyota.ca/</a></h4>
-            </li>
-            <li>
-              <h4>Honda : <a href="https://www.honda.ca/">https://www.honda.ca/</a> </h4>
-            </li>
-            <li>
-              <h4>Ford : <a href="https://www.ford.ca/">https://www.ford.ca/</a> </h4>
-            </li>
-            <li>
-              <h4>Mercedes : <a href="https://www.mercedes-benz.ca/">https://www.mercedes-benz.ca/</a> </h4>
-            </li>
-            <li>
-              <h4>BMW : <a href="https://www.bmw.ca/">https://www.bmw.ca/</a> </h4>
-            </li>
-            <li>
-              <h4>VolksWagen : <a href="https://www.vw.ca/">https://www.vw.ca/</a> </h4>
-            </li>
-            <li>
-              <h4>Acura : <a href="https://www.acura.ca/">https://www.acura.ca/</a> </h4>
-            </li>
+            <a href="#">test</a>
+            <li><h4>Toyota : <a href="https://www.toyota.ca/toyota/en/">https://www.toyota.ca/</a></h4></li>
+            <li><h4>Honda : <a href="https://www.honda.ca/">https://www.honda.ca/</a></h4></li>
+            <li><h4>Ford : <a href="https://www.ford.ca/">https://www.ford.ca/</a></h4></li>
+            <li><h4>Mercedes : <a href="https://www.mercedes-benz.ca/">https://www.mercedes-benz.ca/</a> </h4></li>
+            <li><h4>BMW : <a href="https://www.bmw.ca/">https://www.bmw.ca/</a> </h4></li>
+            <li><h4>VolksWagen : <a href="https://www.vw.ca/">https://www.vw.ca/</a></h4></li>
+            <li><h4>Acura : <a href="https://www.acura.ca/">https://www.acura.ca/</a></h4></li>
+          </ul>
+        </div>
+
+        <div class="popup" id="ServiceBox">
+          <p onclick="CloseForm()">&times;</p>
+          <h1 class="wAlign">Services offerts</h1>
+          <ul>
+            <li>Changement d'huile : 45$</li>
+            <li>Entretien complet du système de freinage : 350$</li>
+            <li>Entretien routinier (changement des liquides et inspection + filtre à air): 85$</li>
+            <li>Permutation des pneux : 50$</li>
+            <li>Taux horaire : 60$/h</li>
+            <li>Toutes les pièces originales sont disponibles pour tous les véhicules que nous vendons!</li>
           </ul>
         </div>
 
 
-        <span id="CarList">
+        <div id="CarList">
           <div><img src="car/acura.jpg" alt="acura">
             <h3>Acura 2013<var>4200$</var></h3>
           </div>
@@ -168,19 +167,16 @@
           <div><img src="car/corolla2013.jpg" alt="Corolla2013">
             <h3>Corolla 2013<var>10995$</var></h3>
           </div>
-        </span>
-
+        </div>
       </article>
     </main>
     <footer>
       <div class="vAlign">
         <h6>Made with &#x269B;Atom </h6>
       </div>
-      <div class="vAlign"><a href="https://github.com/Sacha-Ringenbach/bagnoles.co"><img src="img/github.png" alt="github logo" width="70%" class=" gMargin"></a></div>
+      <div class="vAlign"><a href="https://github.com/Sacha-Ringenbach/bagnoles.co"><img src="img/github.png" alt="github logo" width="32px" class=" gMargin"></a></div>
       <div style="text-align:center;">
         <span id="heure">Heure</span>
-        <a href='https://addmap.net/'>add google map to my website</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=82117313ff79faa5cab5260a786e3523783b7908'></script>
-        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/617071/t/5"></script>
 
       </div>
     </footer>
