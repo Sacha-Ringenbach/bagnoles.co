@@ -223,7 +223,7 @@ h6 {
 
 #ContactForm {
   opacity: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -240,6 +240,8 @@ h6 {
 }
 
 #ManifacturerBox {
+  display:none;
+  flex-flow: column;
   opacity: 0;
 }
 
@@ -250,6 +252,8 @@ h6 {
 }
 
 #ServiceBox {
+  display: none;
+  flex-flow: column;
   opacity: 0;
 }
 
@@ -272,7 +276,6 @@ header {
   /* stays on top */
   z-index: 99;
   background: white;
-  overflow: hidden;
 }
 
 header div {
@@ -294,6 +297,10 @@ header div h1 {
   line-height: 27px;
 }
 
+header h4{
+  white-space: nowrap;
+  }
+
 /* main */
 main {
   display: flex;
@@ -304,7 +311,6 @@ main {
 /* aside */
 main aside {
   padding: 2px;
-  z-index: 1;
   flex: 0;
   width: 200px;
   float: left;
@@ -334,9 +340,8 @@ article #CarList {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  height: auto;
   overflow-y: auto;
-  max-height: 86.8vh;
+  max-height: calc(100vh - 150px) ;
 }
 
 /* Car cases */

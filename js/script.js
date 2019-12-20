@@ -39,6 +39,8 @@ function GetPrice(x) {
 
 function CloseForm(){
   document.getElementById("ExitBox").style.display = "none";
+  document.getElementById("ContactForm").style.display = "none";
+  document.getElementById("ServiceBox").style.display = "none";
   document.getElementById("ContactForm").style.opacity = 0;
   document.getElementById("ManifacturerBox").style.opacity = 0;
   document.getElementById("ServiceBox").style.opacity = 0;
@@ -47,15 +49,18 @@ function CloseForm(){
 
 function OpenForm(){
   document.getElementById("ExitBox").style.display = "inherit";
+  document.getElementById("ContactForm").style.display = "flex";
   document.getElementById("ContactForm").style.opacity = 1;
 }
 
 function OpenServ(){
   document.getElementById("ExitBox").style.display = "inherit";
+  document.getElementById("ServiceBox").style.display = "flex";
   document.getElementById("ServiceBox").style.opacity = 1;
 }
 
 function OpenMan(){
   document.getElementById("ExitBox").style.display = "inherit";
+  document.getElementById("ManifacturerBox").style.display = "flex";
   document.getElementById("ManifacturerBox").style.opacity = 1;
 }
